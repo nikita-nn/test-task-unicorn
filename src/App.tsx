@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  const submit = (e: React.FormEvent) => {
+    console.log(e);
+  };
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <main>
+      <header className="header-main-page">
+        <img src={"/pasteYourLogo.svg"} alt={"logo"} />
+        <button className="connect-button">CONNECT METAMASK</button>
+      </header>
 
-export default App
+      <section className="main-section">
+        <div className="main-heading">
+          <h1>Explore Your own planet</h1>
+          <h1>In our New metaverse</h1>
+        </div>
+        <p className="main-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </section>
+
+      <section className="beta-test-section">
+        <h1 className={"beta-test-heading"}>Beta test registration</h1>
+        <p className={"beta-test-description"}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.{" "}
+        </p>
+        <form className={"beta-test-form"} onSubmit={(e) => submit(e)}>
+          <div className="flex flex-col gap-2">
+            <label className={"beta-test-form-label"}>NAME</label>
+            <input className={"beta-test-form-input"} id={"name"} />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label className={"beta-test-form-label"}>EMAIL</label>
+            <input className={"beta-test-form-input"} id={"email"} />
+          </div>
+          <button className={"connect-button"} type={"submit"}>
+            Connect metamask
+          </button>
+        </form>
+        <p className={"beta-test-description text-[14px] font-[700] uppercase"}>
+          You need to connect wallet before registration
+        </p>
+      </section>
+      <footer className={"footer-main-page"}></footer>
+    </main>
+  );
+};
+
+export default App;

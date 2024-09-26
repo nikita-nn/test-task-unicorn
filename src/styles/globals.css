@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body,
+  #root {
+    @apply bg-[#171719] w-full h-[100vh] text-white pl-7 pr-7;
+  }
+
+  section {
+    @apply pt-14 pb-14;
+  }
+}
+
+@layer components {
+  .header-main-page {
+    @apply flex justify-between items-center pt-6 pb-6;
+  }
+
+  .connect-button {
+    @apply bg-[#E75626] p-2.5 pl-6 pr-6 rounded-full text-[1.125rem] font-[700] uppercase max-w-max;
+  }
+
+  .footer-main-page {
+    @apply h-32;
+  }
+
+  .main-section {
+    @apply flex flex-col justify-center h-[50vh] w-full gap-12 mt-24 mb-12;
+  }
+
+  .main-heading {
+    @apply text-7xl font-[700] uppercase;
+  }
+
+  .main-description {
+    @apply max-w-[30rem] hyphens-auto font-[400] text-[1rem];
+  }
+
+  .beta-test-section {
+    @apply flex flex-col max-w-[30rem] gap-4;
+  }
+
+  .beta-test-heading {
+    @apply text-[2.25rem] text-[#E75626] uppercase font-[700];
+  }
+
+  .beta-test-description {
+    @apply text-[1rem] font-[400];
+  }
+
+  .beta-test-form {
+    @apply flex flex-col gap-7 mt-8;
+  }
+
+  .beta-test-form-input {
+    @apply w-full p-3 bg-transparent border-[1px] border-white rounded-full;
+  }
+
+  .beta-test-form-label {
+    @apply font-[700] text-[1.5rem] uppercase;
+  }
+}
