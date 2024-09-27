@@ -21,19 +21,60 @@ const App = () => {
             <span className={"text-transparent text-stroke"}> our New </span>
             <span>metaverse</span>
           </h1>
+
           <img
-            src={"/planet.png"}
+            src={"planet/planet.png"}
             className={"planet-picture"}
             alt={"planet"}
           />
-          <p className="main-description">
+          <img
+            src={"planet/gray_ring.svg"}
+            alt={"planet"}
+            className={"planet-ring-1"}
+          />
+          <img
+            src={"planet/small_ring_1.svg"}
+            className={"planet-small-ring-1"}
+            alt={"planet"}
+          />
+          <img
+            src={"planet/small_ring_2.svg"}
+            className={"planet-small-ring-2"}
+            alt={"planet"}
+          />
+          <img
+            src={"planet/big_ring.svg"}
+            className={"planet-big-ring"}
+            alt={"planet"}
+          />
+          <img
+            src={"planet/orange_line.svg"}
+            className={"orange-line"}
+            alt={"planet"}
+          />
+          <img
+            src={"planet/planet_badge.svg"}
+            className={"planet-badge"}
+            alt={"planet"}
+          />
+          <img
+            className={"planet-dot-center"}
+            alt={"planet-dot"}
+            src={"/planet/dot.svg"}
+          />
+          <img
+            className={"planet-dot-bottom"}
+            alt={"planet-dot"}
+            src={"/planet/dot.svg"}
+          />
+          <p className="main-description font-avenir">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
         </div>
-        <div className={"flex flex-col gap-7 text-center"}>
+        <div className={"flex flex-col gap-4 text-center"}>
           <h1 className={"main-subheading"}>roadmap stats</h1>
           <div className={"main-stats-container"}>
             {mockStats.map((stat, index) => (
@@ -51,7 +92,7 @@ const App = () => {
 
       <section className="beta-test-section">
         <h1 className={"beta-test-heading"}>Beta test registration</h1>
-        <p className={"beta-test-description"}>
+        <p className={"beta-test-description  font-avenir"}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -61,17 +102,17 @@ const App = () => {
           <div className="flex flex-col gap-2">
             <label className={"beta-test-form-label"}>NAME</label>
             <input
-              className={"beta-test-form-input"}
+              className={"beta-test-form-input font-avenir"}
               id={"name"}
-              placeholder={"We will display your email in participation list "}
+              placeholder={"We will display your name in participation list "}
             />
           </div>
           <div className="flex flex-col gap-2">
             <label className={"beta-test-form-label"}>EMAIL</label>
             <input
-              className={"beta-test-form-input"}
+              className={"beta-test-form-input font-avenir"}
               id={"email"}
-              placeholder={"We will display your name in participation list "}
+              placeholder={"We will display your email in participation list "}
             />
           </div>
           <button className={"connect-button"} type={"submit"}>
@@ -80,7 +121,7 @@ const App = () => {
         </form>
         <p
           className={
-            "beta-test-description text-[14px] font-[700] uppercase tracking-wider"
+            "beta-test-description text-[0.875rem] font-[700] uppercase tracking-wider"
           }
         >
           You need to connect wallet before registration

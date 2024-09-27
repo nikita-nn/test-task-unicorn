@@ -22,7 +22,9 @@
     @apply flex justify-between items-center pt-6 pb-6;
   }
 
-  .font-cyrl {
+  .font-avenir {
+    font-family: "Avenir Next Cyr", sans-serif;
+    @apply tracking-wide;
   }
 
   .text-stroke {
@@ -31,7 +33,7 @@
   }
 
   .connect-button {
-    @apply bg-[#E75626] p-2.5 pl-6 pr-6 rounded-full text-[1.125rem] font-[700] uppercase max-w-max;
+    @apply bg-[#E75626] p-2.5 pl-6 pr-6 rounded-full text-[1.125rem] font-[700] uppercase max-w-max tracking-wide;
   }
 
   .footer-main-page {
@@ -63,17 +65,48 @@
   }
 
   .main-stats-description {
-    @apply font-[400] text-[1.13rem];
+    @apply font-light text-[1.13rem] leading-[1.15rem] tracking-wide;
   }
 
   .main-stats-elem {
-    @apply p-2 border-b-[#D2C4C4] leading-[38.4px];
+    @apply flex flex-col gap-4 p-4 border-b-[#D2C4C4] leading-[38.4px];
   }
 
   .planet-picture {
     @apply absolute right-96 z-10 top-7;
   }
 
+  .planet-ring-1 {
+    @apply absolute right-80 z-[5] -top-8;
+  }
+
+  .planet-small-ring-1 {
+    @apply absolute right-[22.5rem] z-[5] top-1;
+  }
+
+  .planet-small-ring-2 {
+    @apply absolute right-[22rem] z-[5] -top-1;
+  }
+
+  .planet-big-ring {
+    @apply absolute right-[17rem] z-[2] -top-[5rem];
+  }
+
+  .planet-dot-center {
+    @apply absolute z-20 right-[18.4rem] top-[11.5rem];
+  }
+
+  .planet-badge {
+    @apply absolute z-30 right-[31.5rem] -top-[4.25rem];
+  }
+
+  .planet-dot-bottom {
+    @apply absolute z-20 right-[33.5rem] bottom-[2.85rem];
+  }
+
+  .orange-line {
+    @apply absolute right-[18.5rem] z-10 -top-[3.5rem] rotate-[-0deg];
+  }
   .beta-test-section {
     @apply flex flex-col max-w-[30rem] gap-4;
   }
@@ -91,10 +124,10 @@
   }
 
   .beta-test-form-input {
-    @apply w-full p-3 bg-transparent border-[1px] border-white rounded-full;
+    @apply w-full p-3 pl-6 bg-transparent border-[1px] border-white rounded-full;
   }
 
   .beta-test-form-label {
-    @apply font-[700] text-[1.5rem] uppercase;
+    @apply font-[700] text-[1.5rem] uppercase tracking-wider;
   }
 }
