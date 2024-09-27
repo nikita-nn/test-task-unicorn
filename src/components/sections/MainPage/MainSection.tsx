@@ -3,13 +3,13 @@ import { mockStats } from "../../../data/stats.ts";
 
 export const MainSection = () => (
   <section className="main-section">
-    <div className={"flex flex-col gap-10"}>
-      <h1 className={"main-heading"}>
+    <div className={"flex flex-col gap-10 relative"}>
+      <h1 className={"main-heading relative"}>
         <span>Explore Your own planet</span>
         <br />
         <span>In</span>
         <span className={"text-transparent text-stroke"}> our New </span>
-        <span>metaverse</span>
+        <span className={"bg-blend-multiply"}>metaverse</span>
       </h1>
       <Planet />
       <p className="main-description font-avenir">

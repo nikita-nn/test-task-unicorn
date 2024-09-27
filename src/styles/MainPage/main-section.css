@@ -1,0 +1,41 @@
+@layer components {
+  .connect-button {
+    @apply bg-[#E75626] p-2.5 pl-6 pr-6 rounded-full text-[1.125rem] font-[700] uppercase max-w-max tracking-wide;
+  }
+
+  .footer-main-page {
+    @apply h-32;
+  }
+
+  .main-section {
+    @apply flex justify-between h-[30rem] w-full gap-12 mt-24 mb-12;
+  }
+
+  .main-heading {
+    @apply text-[110px] font-[700] uppercase leading-[8rem] tracking-wide z-20;
+  }
+
+  .main-description {
+    @apply max-w-[30rem] hyphens-auto font-[400] text-[1rem] leading-[1.2rem];
+  }
+
+  .main-subheading {
+    @apply text-[32px] uppercase font-[700] tracking-wider;
+  }
+
+  .main-stats-heading {
+    @apply text-[1.75rem] font-[700] text-[#E75626];
+  }
+
+  .main-stats-container {
+    @apply flex flex-col items-center justify-center text-center;
+  }
+
+  .main-stats-description {
+    @apply font-light text-[1.13rem] leading-[1.15rem] tracking-wide;
+  }
+
+  .main-stats-elem {
+    @apply flex flex-col gap-4 p-4 border-b-[#D2C4C4] leading-[38.4px];
+  }
+}

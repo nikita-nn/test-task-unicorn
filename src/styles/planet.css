@@ -1,0 +1,41 @@
+@layer components {
+  .planet-picture {
+    @apply absolute right-[1.5rem] z-10 -top-[2rem];
+  }
+
+  .planet-ring-1 {
+    @apply absolute -right-[2.5rem] z-[5] -top-[5.75rem];
+  }
+
+  .planet-small-ring-1 {
+    @apply absolute right-0 z-[5] -top-[3.75rem];
+  }
+
+  .planet-small-ring-2 {
+    @apply absolute -right-[0.5rem] z-[5] -top-[4.15rem];
+  }
+
+  .planet-big-ring {
+    @apply absolute -right-[5.35rem] z-[2] -top-[8.35rem];
+  }
+
+  .planet-dot-center {
+    @apply absolute z-20 -right-[4.12rem] top-[8rem];
+  }
+
+  .planet-badge {
+    @apply absolute z-30 right-[9rem] -top-[7.75rem];
+  }
+
+  .planet-dot-bottom {
+    @apply absolute z-20 right-[11rem] top-[23.25rem];
+  }
+
+    .planet-dot-top {
+        @apply absolute z-30 right-[11rem] -top-[7.15rem];
+    }
+
+  .orange-line {
+    @apply absolute -right-[4rem] z-10 -top-[7rem];
+  }
+}

@@ -1,0 +1,25 @@
+@layer components {
+  .beta-test-section {
+    @apply flex flex-col max-w-[30rem] gap-4;
+  }
+
+  .beta-test-heading {
+    @apply text-[2.25rem] text-[#E75626] uppercase font-[700] leading-[2.63rem];
+  }
+
+  .beta-test-description {
+    @apply text-[1rem] font-[400] leading-[1.15rem];
+  }
+
+  .beta-test-form {
+    @apply flex flex-col gap-7 mt-8;
+  }
+
+  .beta-test-form-input {
+    @apply w-full p-3 pl-6 bg-transparent border-[1px] border-white rounded-full;
+  }
+
+  .beta-test-form-label {
+    @apply font-[700] text-[1.5rem] uppercase tracking-wider;
+  }
+}

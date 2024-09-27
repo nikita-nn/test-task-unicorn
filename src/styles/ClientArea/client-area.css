@@ -1,0 +1,17 @@
+@layer components {
+  .clientarea-title {
+    @apply text-[3rem] uppercase leading-[3.5rem] mt-7 font-[700];
+  }
+
+  .clientarea-label {
+    @apply font-[700] text-[1.5rem] uppercase tracking-wider;
+  }
+
+  .clientarea-info-container {
+    @apply flex flex-col mt-16 gap-7;
+  }
+
+  .clientarea-data-text {
+    @apply font-[700] text-[#E75626] text-[2rem] uppercase tracking-wider;
+  }
+}

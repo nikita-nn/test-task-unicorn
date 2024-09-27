@@ -1,3 +1,8 @@
+@import "./planet.css";
+@import "./MainPage/main-section.css";
+@import "./MainPage/beta-test-section.css";
+@import "./ClientArea/client-area.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,13 +10,18 @@
 @layer base {
   body,
   #root {
-    @apply bg-[#171719] w-full h-[100vh] text-white pl-8 pr-8;
+    @apply bg-[#171719] w-full h-[100vh] text-white overflow-x-hidden;
     font-family: "Bebas Neue", sans-serif;
   }
 
   section {
     @apply pt-14 pb-14;
   }
+
+  main, header {
+    @apply pl-14 pr-14
+  }
+
   h1 {
     @apply tracking-wide;
   }
@@ -27,107 +37,12 @@
     @apply tracking-wide;
   }
 
+  .navbar-wallet {
+    @apply font-[700] text-[#E75626] text-[1.15rem];
+  }
+
   .text-stroke {
     -webkit-text-stroke: 1px white;
     @apply font-[500];
-  }
-
-  .connect-button {
-    @apply bg-[#E75626] p-2.5 pl-6 pr-6 rounded-full text-[1.125rem] font-[700] uppercase max-w-max tracking-wide;
-  }
-
-  .footer-main-page {
-    @apply h-32;
-  }
-
-  .main-section {
-    @apply flex justify-between h-[30rem] w-full gap-12 mt-24 mb-12 relative;
-  }
-
-  .main-heading {
-    @apply text-[110px] font-[700] uppercase leading-[8rem] tracking-wide z-20;
-  }
-
-  .main-description {
-    @apply max-w-[30rem] hyphens-auto font-[400] text-[1rem] leading-[1.2rem];
-  }
-
-  .main-subheading {
-    @apply text-[32px] uppercase font-[700] tracking-wider;
-  }
-
-  .main-stats-heading {
-    @apply text-[1.75rem] font-[700] text-[#E75626];
-  }
-
-  .main-stats-container {
-    @apply flex flex-col items-center justify-center text-center;
-  }
-
-  .main-stats-description {
-    @apply font-light text-[1.13rem] leading-[1.15rem] tracking-wide;
-  }
-
-  .main-stats-elem {
-    @apply flex flex-col gap-4 p-4 border-b-[#D2C4C4] leading-[38.4px];
-  }
-
-  .planet-picture {
-    @apply absolute right-96 z-10 top-7;
-  }
-
-  .planet-ring-1 {
-    @apply absolute right-80 z-[5] -top-8;
-  }
-
-  .planet-small-ring-1 {
-    @apply absolute right-[22.5rem] z-[5] top-1;
-  }
-
-  .planet-small-ring-2 {
-    @apply absolute right-[22rem] z-[5] -top-1;
-  }
-
-  .planet-big-ring {
-    @apply absolute right-[17rem] z-[2] -top-[5rem];
-  }
-
-  .planet-dot-center {
-    @apply absolute z-20 right-[18.4rem] top-[11.5rem];
-  }
-
-  .planet-badge {
-    @apply absolute z-30 right-[31.5rem] -top-[4.25rem];
-  }
-
-  .planet-dot-bottom {
-    @apply absolute z-20 right-[33.5rem] bottom-[2.85rem];
-  }
-
-  .orange-line {
-    @apply absolute right-[18.5rem] z-10 -top-[3.5rem] rotate-[-0deg];
-  }
-  .beta-test-section {
-    @apply flex flex-col max-w-[30rem] gap-4;
-  }
-
-  .beta-test-heading {
-    @apply text-[2.25rem] text-[#E75626] uppercase font-[700] leading-[2.63rem];
-  }
-
-  .beta-test-description {
-    @apply text-[1rem] font-[400] leading-[1.15rem];
-  }
-
-  .beta-test-form {
-    @apply flex flex-col gap-7 mt-8;
-  }
-
-  .beta-test-form-input {
-    @apply w-full p-3 pl-6 bg-transparent border-[1px] border-white rounded-full;
-  }
-
-  .beta-test-form-label {
-    @apply font-[700] text-[1.5rem] uppercase tracking-wider;
   }
 }
