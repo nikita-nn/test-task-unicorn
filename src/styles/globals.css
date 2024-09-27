@@ -5,17 +5,29 @@
 @layer base {
   body,
   #root {
-    @apply bg-[#171719] w-full h-[100vh] text-white pl-7 pr-7;
+    @apply bg-[#171719] w-full h-[100vh] text-white pl-8 pr-8;
+    font-family: "Bebas Neue", sans-serif;
   }
 
   section {
     @apply pt-14 pb-14;
+  }
+  h1 {
+    @apply tracking-wide;
   }
 }
 
 @layer components {
   .header-main-page {
     @apply flex justify-between items-center pt-6 pb-6;
+  }
+
+  .font-cyrl {
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 1px white;
+    @apply font-[500];
   }
 
   .connect-button {
@@ -27,15 +39,39 @@
   }
 
   .main-section {
-    @apply flex flex-col justify-center h-[50vh] w-full gap-12 mt-24 mb-12;
+    @apply flex justify-between h-[30rem] w-full gap-12 mt-24 mb-12 relative;
   }
 
   .main-heading {
-    @apply text-7xl font-[700] uppercase;
+    @apply text-[110px] font-[700] uppercase leading-[8rem] tracking-wide z-20;
   }
 
   .main-description {
-    @apply max-w-[30rem] hyphens-auto font-[400] text-[1rem];
+    @apply max-w-[30rem] hyphens-auto font-[400] text-[1rem] leading-[1.2rem];
+  }
+
+  .main-subheading {
+    @apply text-[32px] uppercase font-[700] tracking-wider;
+  }
+
+  .main-stats-heading {
+    @apply text-[1.75rem] font-[700] text-[#E75626];
+  }
+
+  .main-stats-container {
+    @apply flex flex-col items-center justify-center text-center;
+  }
+
+  .main-stats-description {
+    @apply font-[400] text-[1.13rem];
+  }
+
+  .main-stats-elem {
+    @apply p-2 border-b-[#D2C4C4] leading-[38.4px];
+  }
+
+  .planet-picture {
+    @apply absolute right-96 z-10 top-7;
   }
 
   .beta-test-section {
@@ -43,11 +79,11 @@
   }
 
   .beta-test-heading {
-    @apply text-[2.25rem] text-[#E75626] uppercase font-[700];
+    @apply text-[2.25rem] text-[#E75626] uppercase font-[700] leading-[2.63rem];
   }
 
   .beta-test-description {
-    @apply text-[1rem] font-[400];
+    @apply text-[1rem] font-[400] leading-[1.15rem];
   }
 
   .beta-test-form {
