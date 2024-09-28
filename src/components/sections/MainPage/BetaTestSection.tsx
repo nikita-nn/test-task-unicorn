@@ -2,10 +2,14 @@ import { BetaTestListMeComponent } from "../../widgets/BetaTestListMeComponent.t
 import { useUser } from "../../../providers/UserProvider.tsx";
 import { BetaTestSignUpForm } from "../../widgets/BetaTestSignUpForm.tsx";
 import { BetaTestUsersTable } from "../../widgets/BetaTestUsersTable.tsx";
+import { useEffect } from "react";
 
 export const BetaTestSection = () => {
   const { user, reloadUser } = useUser();
-  reloadUser();
+
+  useEffect(() => {
+    reloadUser();
+  }, []);
 
   if (!user) {
     return <div>Loading...</div>;

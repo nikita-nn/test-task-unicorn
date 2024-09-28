@@ -1,10 +1,15 @@
 import { useUser } from "../../providers/UserProvider.tsx";
 import { Planet } from "../../components/Planet.tsx";
 import { NameEmailComponent } from "../../components/widgets/NameEmailComponent.tsx";
+import { useEffect } from "react";
 
 const ClientAreaView = () => {
   const { user, reloadUser } = useUser();
-  reloadUser();
+
+  useEffect(() => {
+    reloadUser();
+  }, [reloadUser]);
+
   if (!user) {
     return <div>Loading....</div>;
   }
@@ -19,7 +24,7 @@ const ClientAreaView = () => {
             <p className={"clientarea-data-text"}>{user.wallet}</p>
           </div>
         </div>
-        <div className={"relative translate-x-[6rem] translate-y-[-20rem]"}>
+        <div className="relative animate-fly-in">
           <Planet isClientArea={true} />
         </div>
       </section>

@@ -23,15 +23,15 @@ export const MainSection = () => (
       <h1 className={"main-subheading"}>roadmap stats</h1>
       <div className={"main-stats-container"}>
         {mockStats.map((stat, index) => (
-          <>
-            <div className={`main-stats-elem`} key={index}>
+          <div key={index}>
+            <div className={`main-stats-elem`}>
               <h1 className={"main-stats-heading"}>
                 {stat.data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
               </h1>
               <p className={"main-stats-description"}>{stat.name}</p>
             </div>
             <div className={"w-[12rem] h-[1px] bg-[#D2C4C4]"} />
-          </>
+          </div>
         ))}
       </div>
     </div>

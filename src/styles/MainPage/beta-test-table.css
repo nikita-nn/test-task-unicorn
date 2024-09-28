@@ -1,0 +1,29 @@
+@layer components {
+  .beta-test-table {
+    @apply flex flex-col gap-8 mr-10;
+  }
+
+  .beta-test-table-title {
+    @apply font-[700] text-[2.25rem] tracking-wider -mt-2;
+  }
+
+  .beta-test-table-item {
+    @apply border-b border-white font-avenir text-[0.875rem];
+  }
+
+  .beta-test-table-input {
+    @apply text-center bg-[#171719] border-[1px] w-12 h-12 font-avenir rounded-lg;
+  }
+
+  .beta-test-table-pagination {
+    @apply flex justify-between items-center;
+  }
+
+  .beta-test-table-page-button {
+    @apply font-avenir rounded-lg border-2 w-max p-2 pl-4 pr-4;
+  }
+
+  .beta-test-table-wallet {
+    @apply overflow-hidden whitespace-nowrap text-ellipsis max-w-[12rem];
+  }
+}

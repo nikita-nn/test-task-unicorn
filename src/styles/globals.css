@@ -3,6 +3,7 @@
 @import "./MainPage/beta-test-section.css";
 @import "./ClientArea/client-area.css";
 @import "./base.css";
+@import "./MainPage/beta-test-table.css";
 
 @tailwind base;
 @tailwind components;

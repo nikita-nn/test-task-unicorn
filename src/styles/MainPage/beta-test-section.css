@@ -1,6 +1,6 @@
 @layer components {
   .beta-test-section {
-    @apply grid grid-cols-[30rem_45rem] gap-x-64 overflow-ellipsis mt-20;
+    @apply grid grid-cols-[30rem_auto] overflow-ellipsis mt-20 justify-between;
   }
 
   .beta-test-heading {
@@ -17,17 +17,5 @@
 
   .beta-test-form-label {
     @apply font-[700] text-[1.5rem] uppercase tracking-wider;
-  }
-
-  .beta-test-table {
-    @apply flex flex-col gap-8;
-  }
-
-  .beta-test-table-title {
-    @apply font-[700] text-[2.25rem] tracking-wider -mt-3;
-  }
-
-  .beta-test-table-item{
-    @apply border-b border-white font-avenir text-[0.875rem]
   }
 }
