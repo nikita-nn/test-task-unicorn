@@ -4,7 +4,6 @@
  * адаптируется под личный кабинет.
  */
 
-
 export const Planet = ({
   isClientArea = false,
 }: {
