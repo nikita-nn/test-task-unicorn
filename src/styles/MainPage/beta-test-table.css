@@ -8,7 +8,7 @@
   }
 
   .beta-test-table-item {
-    @apply border-b border-white font-avenir text-[0.875rem];
+    @apply border-b border-white font-avenir text-[0.875rem] cursor-pointer;
   }
 
   .beta-test-table-input {

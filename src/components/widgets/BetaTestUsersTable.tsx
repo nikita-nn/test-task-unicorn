@@ -1,10 +1,12 @@
 import { useTableData } from "../../providers/UsersTableProvider.tsx";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const BetaTestUsersTable = () => {
   const { items, fetchPage } = useTableData();
   const [perPage, setPerPage] = useState<number>(10);
   const [currentPage, setCurrentPage] = useState<number>(0);
+  const navigate = useNavigate();
 
   const fetchTableData = async () => {
     await fetchPage(currentPage, perPage);
@@ -36,7 +38,19 @@ export const BetaTestUsersTable = () => {
         </thead>
         <tbody>
           {items?.items.map((item, index) => (
-            <tr key={index} className="beta-test-table-item">
+            <tr
+              key={index}
+              className="beta-test-table-item"
+              onClick={() =>
+                navigate("/userinfo", {
+                  state: {
+                    name: item.username,
+                    email: item.email,
+                    wallet: item.address,
+                  },
+                })
+              }
+            >
               <td className="py-3 pr-12 text-left">{item.username}</td>
               <td className="py-3 pr-12 text-left">{item.email}</td>
               <td className="py-3 beta-test-table-wallet">{item.address}</td>

@@ -2,18 +2,9 @@ import { BetaTestListMeComponent } from "../../widgets/BetaTestListMeComponent.t
 import { useUser } from "../../../providers/UserProvider.tsx";
 import { BetaTestSignUpForm } from "../../widgets/BetaTestSignUpForm.tsx";
 import { BetaTestUsersTable } from "../../widgets/BetaTestUsersTable.tsx";
-import { useEffect } from "react";
-
 export const BetaTestSection = () => {
-  const { user, reloadUser } = useUser();
+  const { user } = useUser();
 
-  useEffect(() => {
-    reloadUser();
-  }, []);
-
-  if (!user) {
-    return <div>Loading...</div>;
-  }
   return (
     <section className="beta-test-section">
       <div className="flex flex-col gap-4">
@@ -30,7 +21,7 @@ export const BetaTestSection = () => {
           <BetaTestSignUpForm />
         )}
       </div>
-      <BetaTestUsersTable />
+      {user && <BetaTestUsersTable />}
     </section>
   );
 };

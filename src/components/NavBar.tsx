@@ -10,9 +10,7 @@ export const NavBar = () => {
         <img src={"/pasteYourLogo.svg"} alt={"logo"} />
       </Link>
       {user && user.wallet ? (
-        <Link to={"/clientarea"} className={"overflow-ellipsis"}>
-          <p className={"navbar-wallet"}>{user.wallet}</p>
-        </Link>
+        <p className={"navbar-wallet"}>{user.wallet}</p>
       ) : (
         <button className="main-button">CONNECT METAMASK</button>
       )}

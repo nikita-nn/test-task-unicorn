@@ -3,24 +3,13 @@ import { IUserContext, User } from "../types/UserTypes.ts";
 
 const UserContext = React.createContext<IUserContext | null>(null);
 
-const mockUser: User = {
-  wallet: "0xe02354bdbb79b935407488c4276ff7898802e574",
-  name: "Nikita Arkhipov",
-  email: "nikitaarkhipov55@gmail.com",
-};
-
 export const UserProvider = ({ children }: React.PropsWithChildren) => {
-  const [user, setUser] = useState<User | null>(null);
-  const [trigger, setTrigger] = useState<boolean>(false);
+  const [user] = useState<User | null>(null);
 
-  useEffect(() => {
-    // TODO: User fetch logic, now using mock user simulating backend response
-    setUser(mockUser);
-  }, []);
-
-  const reloadUser = () => setTrigger(!trigger);
+  useEffect(() => {}, []);
 
   const editUser = () => {};
+  const reloadUser = () => {};
 
   return (
     <UserContext.Provider value={{ user, reloadUser, editUser }}>

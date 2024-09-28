@@ -1,27 +1,26 @@
-import { useUser } from "../../providers/UserProvider.tsx";
 import { Planet } from "../../components/Planet.tsx";
 import { NameEmailComponent } from "../../components/widgets/NameEmailComponent.tsx";
-import { useEffect } from "react";
+import { Navigate, useLocation } from "react-router-dom";
 
-const ClientAreaView = () => {
-  const { user, reloadUser } = useUser();
+const UserInfoView = () => {
+  const location = useLocation();
 
-  useEffect(() => {
-    reloadUser();
-  }, [reloadUser]);
-
-  if (!user) {
-    return <div>Loading....</div>;
+  if (!location.state) {
+    return <Navigate to={"/"} />;
   }
+
   return (
     <main>
       <section>
         <h1 className={"clientarea-title"}>PErsonal data</h1>
         <div className={"clientarea-info-container"}>
-          <NameEmailComponent email={user.email} name={user.name} />
+          <NameEmailComponent
+            email={location.state.email}
+            name={location.state.name}
+          />
           <div>
             <label className={"clientarea-label"}>Wallet</label>
-            <p className={"clientarea-data-text"}>{user.wallet}</p>
+            <p className={"clientarea-data-text"}>{location.state.wallet}</p>
           </div>
         </div>
         <div className="relative animate-fly-in">
@@ -32,4 +31,4 @@ const ClientAreaView = () => {
   );
 };
 
-export default ClientAreaView;
+export default UserInfoView;

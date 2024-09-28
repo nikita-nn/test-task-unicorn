@@ -4,9 +4,7 @@ import React from "react";
 import { AppProviders } from "./providers/AppProviders.tsx";
 
 const MainPage = React.lazy(() => import("./views/pages/MainPageView.tsx"));
-const ClientAreaPage = React.lazy(
-  () => import("./views/pages/ClientAreaView.tsx"),
-);
+const UserInfoPage = React.lazy(() => import("./views/pages/UserInfoView.tsx"));
 
 const App = () => {
   const router = createBrowserRouter([
@@ -20,7 +18,7 @@ const App = () => {
       ),
       children: [
         { path: "/", element: <MainPage /> },
-        { path: "/clientarea", element: <ClientAreaPage /> },
+        { path: "/userinfo", element: <UserInfoPage /> },
       ],
     },
   ]);
