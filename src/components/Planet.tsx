@@ -1,4 +1,8 @@
-export const Planet = ({isClientArea = false}: {isClientArea?: boolean}) => {
+export const Planet = ({
+  isClientArea = false,
+}: {
+  isClientArea?: boolean;
+}) => {
   return (
     <>
       <img
@@ -31,19 +35,19 @@ export const Planet = ({isClientArea = false}: {isClientArea?: boolean}) => {
         className={"orange-line"}
         alt={"planet"}
       />
-        {isClientArea ? (
-            <img
-                src={"/planet/dot.svg"}
-                className={"planet-dot-top"}
-                alt={"planet"}
-            />
-        ) : (
-            <img
-                src={"planet/planet_badge.svg"}
-                className={"planet-badge"}
-                alt={"planet"}
-            />
-        )}
+      {isClientArea ? (
+        <img
+          src={"/planet/dot.svg"}
+          className={"planet-dot-top"}
+          alt={"planet"}
+        />
+      ) : (
+        <img
+          src={"planet/planet_badge.svg"}
+          className={"planet-badge"}
+          alt={"planet"}
+        />
+      )}
       <img
         className={"planet-dot-center"}
         alt={"planet-dot"}

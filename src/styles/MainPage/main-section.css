@@ -1,7 +1,4 @@
 @layer components {
-  .connect-button {
-    @apply bg-[#E75626] p-2.5 pl-6 pr-6 rounded-full text-[1.125rem] font-[700] uppercase max-w-max tracking-wide;
-  }
 
   .footer-main-page {
     @apply h-32;

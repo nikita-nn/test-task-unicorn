@@ -18,8 +18,9 @@
     @apply pt-14 pb-14;
   }
 
-  main, header {
-    @apply pl-14 pr-14
+  main,
+  header {
+    @apply pl-14 pr-14;
   }
 
   h1 {
@@ -30,6 +31,10 @@
 @layer components {
   .header-main-page {
     @apply flex justify-between items-center pt-6 pb-6;
+  }
+
+  .main-button {
+    @apply bg-[#E75626] p-2.5 pl-6 pr-6 pb-1.5 rounded-full text-[1.125rem] font-[700] uppercase max-w-max tracking-wider hover:bg-[#BE3B10] duration-300;
   }
 
   .font-avenir {

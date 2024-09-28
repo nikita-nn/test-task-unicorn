@@ -31,9 +31,9 @@
     @apply absolute z-20 right-[11rem] top-[23.25rem];
   }
 
-    .planet-dot-top {
-        @apply absolute z-30 right-[11rem] -top-[7.15rem];
-    }
+  .planet-dot-top {
+    @apply absolute z-30 right-[11rem] -top-[7.15rem];
+  }
 
   .orange-line {
     @apply absolute -right-[4rem] z-10 -top-[7rem];
