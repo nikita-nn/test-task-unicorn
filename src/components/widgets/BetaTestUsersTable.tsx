@@ -35,9 +35,9 @@ export const BetaTestUsersTable = () => {
               "text-[1.5rem] tracking-wider uppercase border-b border-white"
             }
           >
-            <th className={"text-left py-2 w-[20%]"}>NAME</th>
-            <th className={"text-left py-2 w-[30%]"}>EMAIL</th>
-            <th className={"text-left py-2 w-[30%]"}>WALLET</th>
+            <th className={"text-left py-2 "}>NAME</th>
+            <th className={"text-left py-2 "}>EMAIL</th>
+            <th className={"text-left py-2"}>WALLET</th>
           </tr>
         </thead>
         <tbody>
@@ -75,7 +75,7 @@ export const BetaTestUsersTable = () => {
               <td className="beta-test-table-col-item">{item.username}</td>
               <td className="beta-test-table-col-item">{item.email}</td>
               <td className=" beta-test-table-wallet">{item.address}</td>
-              <td></td>
+              <td className={"beta-test-table-close-icon"}/>
             </tr>
           ))}
         </tbody>

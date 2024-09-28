@@ -1,4 +1,4 @@
-import { Planet } from "../../Planet.tsx";
+import { Planet } from "../../widgets/Planet.tsx";
 import { mockStats } from "../../../data/stats.ts";
 
 export const MainSection = () => (

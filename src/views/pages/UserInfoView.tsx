@@ -1,4 +1,4 @@
-import { Planet } from "../../components/Planet.tsx";
+import { Planet } from "../../components/widgets/Planet.tsx";
 import { NameEmailComponent } from "../../components/widgets/NameEmailComponent.tsx";
 import { Navigate, useLocation } from "react-router-dom";
 
