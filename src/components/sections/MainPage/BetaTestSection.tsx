@@ -2,6 +2,11 @@ import { BetaTestListMeComponent } from "../../widgets/BetaTestListMeComponent.t
 import { useUser } from "../../../providers/UserProvider.tsx";
 import { BetaTestSignUpForm } from "../../widgets/BetaTestSignUpForm.tsx";
 import { BetaTestUsersTable } from "../../widgets/BetaTestUsersTable.tsx";
+
+/**
+ * Секция бета-тестирования мета-вселенной.
+ */
+
 export const BetaTestSection = () => {
   const { user } = useUser();
 

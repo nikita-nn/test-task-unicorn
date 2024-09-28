@@ -1,3 +1,9 @@
+/**
+ * Компонент для корректного отображения email и имени пользователя.
+ * @param name - имя пользователя.
+ * @param email - электронная почта пользователя.
+ */
+
 export const NameEmailComponent = ({
   name,
   email,

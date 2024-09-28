@@ -1,6 +1,10 @@
 import { Planet } from "../../widgets/Planet.tsx";
 import { mockStats } from "../../../data/stats.ts";
 
+/**
+ * Главная секция лендинга.
+ */
+
 export const MainSection = () => (
   <section className="main-section">
     <div className={"flex flex-col gap-10 relative"}>

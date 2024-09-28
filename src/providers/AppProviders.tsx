@@ -3,7 +3,9 @@ import { UserProvider } from "./UserProvider.tsx";
 import { UserTableProvider } from "./UsersTableProvider.tsx";
 import { WagmiProviderContext } from "./WagmiProviderContext.tsx";
 
-// All application providers
+/**
+ * Все ContextProviders приложения.
+ */
 
 export const AppProviders = ({ children }: React.PropsWithChildren) => (
   <WagmiProviderContext>

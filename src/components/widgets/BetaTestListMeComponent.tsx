@@ -1,6 +1,10 @@
 import { NameEmailComponent } from "./NameEmailComponent.tsx";
 import { useUser } from "../../providers/UserProvider.tsx";
 
+/**
+ * Компонент отвечающий за показ пользователя в таблице.
+ */
+
 export const BetaTestListMeComponent = ({
   name,
   email,

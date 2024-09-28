@@ -1,7 +1,10 @@
 import { useUser } from "../providers/UserProvider.tsx";
 import { Link } from "react-router-dom";
-
 import { ConnectAccountButton } from "./widgets/ConnectAccountButton.tsx";
+
+/**
+ * Навигационное меню для пользователя
+ */
 
 export const NavBar = () => {
   const { user } = useUser();

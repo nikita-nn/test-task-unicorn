@@ -1,12 +1,27 @@
 import React, { useState } from "react";
 import { IUserContext, User } from "../types/UserTypes.ts";
 
+/**
+ * Контекст данных пользователя, управление и обновление их.
+ */
+
 const UserContext = React.createContext<IUserContext | null>(null);
 
 export const UserProvider = ({ children }: React.PropsWithChildren) => {
   const [user, setUser] = useState<User | null>(null);
 
+  /**
+   * Функция для обновления данных пользователя.
+   * Not Implemented.
+   */
+
   const reloadUser = () => {};
+
+  /**
+   * Функция для редактирования данных пользователя.
+   * @param whatToChange - все ключи User, то что меняем.
+   * @param value - на что меняем.
+   */
 
   const editUser = (whatToChange: keyof User, value: string | boolean) => {
     setUser((prevUser) => {
@@ -20,6 +35,10 @@ export const UserProvider = ({ children }: React.PropsWithChildren) => {
     </UserContext.Provider>
   );
 };
+
+/**
+ * Хук для извлечения и обновления данных о пользователе
+ */
 
 export const useUser = () => {
   const context = React.useContext(UserContext);

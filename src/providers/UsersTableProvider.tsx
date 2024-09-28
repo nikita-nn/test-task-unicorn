@@ -5,10 +5,20 @@ import {
   UsersTableResponse,
 } from "../types/UsersTableTypes.ts";
 
+/**
+ * Контекст данных пользователей в таблице, задел на будущее.
+ */
+
 const UserTableContext = React.createContext<TableReponseContext | null>(null);
 
 export const UserTableProvider = ({ children }: React.PropsWithChildren) => {
   const [items, setItems] = useState<UsersTableResponse | null>(null);
+
+  /**
+   * Функция для запроса данных с сервера для таблицы.
+   * @param page - параметр указывающий на номер страницы с которой запрашиваются данные.
+   * @param elemsInPage - параметр указывающий на число элементов на странице.
+   */
 
   const fetchPage = async (page: number, elemsInPage: number) => {
     const response = await fetch(
@@ -28,6 +38,10 @@ export const UserTableProvider = ({ children }: React.PropsWithChildren) => {
     </UserTableContext.Provider>
   );
 };
+
+/**
+ * Хук для извлечения и получения данных о пользователях в таблице
+ */
 
 export const useTableData = () => {
   const context = React.useContext(UserTableContext);

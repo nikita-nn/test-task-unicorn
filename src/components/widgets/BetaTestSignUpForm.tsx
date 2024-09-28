@@ -2,6 +2,10 @@ import { useState } from "react";
 import { useUser } from "../../providers/UserProvider.tsx";
 import { ConnectAccountButton } from "./ConnectAccountButton.tsx";
 
+/**
+ * Форма регистрации на бета-тест.
+ */
+
 export const BetaTestSignUpForm = () => {
   const [name, setName] = useState<string>();
   const [email, setEmail] = useState<string>();

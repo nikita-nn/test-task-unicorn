@@ -4,6 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { useUser } from "../../providers/UserProvider.tsx";
 import { X } from "lucide-react";
 
+/**
+ * Таблица пользователей, зарегистрировавшихся на бета-тестирование.
+ */
+
 export const BetaTestUsersTable = () => {
   const { items, fetchPage } = useTableData();
   const [perPage, setPerPage] = useState<number>(10);

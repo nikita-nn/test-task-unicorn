@@ -1,7 +1,11 @@
 import { useAccount, useConnect } from "wagmi";
 import { useUser } from "../../providers/UserProvider.tsx";
 import { useEffect } from "react";
-import {metaMask} from "wagmi/connectors";
+import { metaMask } from "wagmi/connectors";
+
+/**
+ * Кнопка подключения MetaMask wallet к профилю пользователя.
+ */
 
 export const ConnectAccountButton = () => {
   const { connect } = useConnect();

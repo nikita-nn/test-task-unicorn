@@ -6,6 +6,10 @@ import { AppProviders } from "./providers/AppProviders.tsx";
 const MainPage = React.lazy(() => import("./views/pages/MainPageView.tsx"));
 const UserInfoPage = React.lazy(() => import("./views/pages/UserInfoView.tsx"));
 
+/**
+ * Роутинг приложения
+ */
+
 const App = () => {
   const router = createBrowserRouter([
     {

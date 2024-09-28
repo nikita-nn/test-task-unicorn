@@ -2,6 +2,10 @@ import { Planet } from "../../components/widgets/Planet.tsx";
 import { NameEmailComponent } from "../../components/widgets/NameEmailComponent.tsx";
 import { Navigate, useLocation } from "react-router-dom";
 
+/**
+ * "/userinfo" - страница с данными о выбранном пользователе в таблице.
+ */
+
 const UserInfoView = () => {
   const location = useLocation();
 
