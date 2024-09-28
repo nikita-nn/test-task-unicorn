@@ -1,12 +1,15 @@
 import { useTableData } from "../../providers/UsersTableProvider.tsx";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useUser } from "../../providers/UserProvider.tsx";
+import { X } from "lucide-react";
 
 export const BetaTestUsersTable = () => {
   const { items, fetchPage } = useTableData();
   const [perPage, setPerPage] = useState<number>(10);
   const [currentPage, setCurrentPage] = useState<number>(0);
   const navigate = useNavigate();
+  const { user, editUser } = useUser();
 
   const fetchTableData = async () => {
     await fetchPage(currentPage, perPage);
@@ -19,6 +22,7 @@ export const BetaTestUsersTable = () => {
   if (!items) {
     return <div>Loading...</div>;
   }
+  console.log(user);
   return (
     <div className="beta-test-table">
       <h1 className={"beta-test-table-title"}>
@@ -37,6 +41,23 @@ export const BetaTestUsersTable = () => {
           </tr>
         </thead>
         <tbody>
+          {user &&
+            user.name &&
+            user.email &&
+            user.listed &&
+            currentPage == 0 && (
+              <tr className={"beta-test-table-item text-[#E75626] cursor-auto"}>
+                <td className="beta-test-table-col-item">{user.name}</td>
+                <td className="beta-test-table-col-item">{user.email}</td>
+                <td className="beta-test-table-wallet">{user.wallet}</td>
+                <td>
+                  <X
+                    className={"text-white w-4 h-4"}
+                    onClick={() => editUser("listed", false)}
+                  />
+                </td>
+              </tr>
+            )}
           {items?.items.map((item, index) => (
             <tr
               key={index}
@@ -51,9 +72,10 @@ export const BetaTestUsersTable = () => {
                 })
               }
             >
-              <td className="py-3 pr-12 text-left">{item.username}</td>
-              <td className="py-3 pr-12 text-left">{item.email}</td>
-              <td className="py-3 beta-test-table-wallet">{item.address}</td>
+              <td className="beta-test-table-col-item">{item.username}</td>
+              <td className="beta-test-table-col-item">{item.email}</td>
+              <td className=" beta-test-table-wallet">{item.address}</td>
+              <td></td>
             </tr>
           ))}
         </tbody>

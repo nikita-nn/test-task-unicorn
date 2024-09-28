@@ -15,7 +15,7 @@ export const BetaTestSection = () => {
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.{" "}
         </p>
-        {user ? (
+        {user && user.name && user.email ? (
           <BetaTestListMeComponent name={user.name} email={user.email} />
         ) : (
           <BetaTestSignUpForm />
