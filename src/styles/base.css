@@ -1,0 +1,39 @@
+@layer components {
+    .header-main-page {
+        @apply flex justify-between items-center pt-6 pb-6;
+    }
+
+    .main-input {
+        @apply w-full p-3 pl-6 bg-transparent border-[1px] border-white rounded-full;
+    }
+
+    .main-input:focus {
+        @apply focus:border-[#E75626] focus:outline-none duration-300;
+    }
+
+    .main-input:disabled {
+        @apply cursor-not-allowed border-gray-500 placeholder-gray-500;
+    }
+
+    .main-button {
+        @apply bg-[#E75626] p-2.5 pl-6 pr-6 pb-1.5 rounded-full text-[1.125rem] font-[700] uppercase max-w-max tracking-wider hover:bg-[#BE3B10] duration-300;
+    }
+
+    .main-button:disabled {
+        @apply disabled:saturate-[75%] disabled:hover:bg-[#E75626] disabled:cursor-not-allowed;
+    }
+
+    .font-avenir {
+        font-family: "Avenir Next Cyr", sans-serif;
+        @apply tracking-wide;
+    }
+
+    .navbar-wallet {
+        @apply font-[700] text-[#E75626] text-[1.15rem];
+    }
+
+    .text-stroke {
+        -webkit-text-stroke: 1px white;
+        @apply font-[500];
+    }
+}

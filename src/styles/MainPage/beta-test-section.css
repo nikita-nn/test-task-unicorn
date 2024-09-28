@@ -1,6 +1,6 @@
 @layer components {
   .beta-test-section {
-    @apply flex flex-col max-w-[30rem] gap-4;
+    @apply grid grid-cols-[30rem_45rem] gap-x-64 overflow-ellipsis mt-20;
   }
 
   .beta-test-heading {
@@ -15,11 +15,19 @@
     @apply flex flex-col gap-7 mt-8;
   }
 
-  .beta-test-form-input {
-    @apply w-full p-3 pl-6 bg-transparent border-[1px] border-white rounded-full;
-  }
-
   .beta-test-form-label {
     @apply font-[700] text-[1.5rem] uppercase tracking-wider;
+  }
+
+  .beta-test-table {
+    @apply flex flex-col gap-8;
+  }
+
+  .beta-test-table-title {
+    @apply font-[700] text-[2.25rem] tracking-wider -mt-3;
+  }
+
+  .beta-test-table-item{
+    @apply border-b border-white font-avenir text-[0.875rem]
   }
 }

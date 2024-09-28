@@ -25,7 +25,9 @@ export const MainSection = () => (
         {mockStats.map((stat, index) => (
           <>
             <div className={`main-stats-elem`} key={index}>
-              <h1 className={"main-stats-heading"}>{stat.data}</h1>
+              <h1 className={"main-stats-heading"}>
+                {stat.data.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              </h1>
               <p className={"main-stats-description"}>{stat.name}</p>
             </div>
             <div className={"w-[12rem] h-[1px] bg-[#D2C4C4]"} />

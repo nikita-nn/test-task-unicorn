@@ -5,7 +5,7 @@ export const BetaTestSignUpForm = () => {
         <div className="flex flex-col gap-2">
           <label className={"beta-test-form-label"}>NAME</label>
           <input
-            className={"beta-test-form-input font-avenir"}
+            className={"main-input font-avenir"}
             id={"name"}
             placeholder={"We will display your name in participation list "}
           />
@@ -13,7 +13,8 @@ export const BetaTestSignUpForm = () => {
         <div className="flex flex-col gap-2">
           <label className={"beta-test-form-label"}>EMAIL</label>
           <input
-            className={"beta-test-form-input font-avenir"}
+            disabled
+            className={"main-input font-avenir"}
             id={"email"}
             placeholder={"We will display your email in participation list "}
           />

@@ -1,8 +1,13 @@
 import React from "react";
 import { UserProvider } from "./UserProvider.tsx";
+import { UserTableProvider } from "./UsersTableContext.tsx";
 
 // All application providers
 
 export const AppProviders = ({ children }: React.PropsWithChildren) => (
-  <UserProvider>{children}</UserProvider>
+  <UserProvider>
+    <UserTableProvider>
+        {children}
+    </UserTableProvider>
+  </UserProvider>
 );

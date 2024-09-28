@@ -1,6 +1,6 @@
 import { useUser } from "../../providers/UserProvider.tsx";
 import { Planet } from "../../components/Planet.tsx";
-import {NameEmailComponent} from "../../components/widgets/NameEmailComponent.tsx";
+import { NameEmailComponent } from "../../components/widgets/NameEmailComponent.tsx";
 
 const ClientAreaView = () => {
   const { user, reloadUser } = useUser();
@@ -13,7 +13,7 @@ const ClientAreaView = () => {
       <section>
         <h1 className={"clientarea-title"}>PErsonal data</h1>
         <div className={"clientarea-info-container"}>
-         <NameEmailComponent email={user.email} name={user.name}/>
+          <NameEmailComponent email={user.email} name={user.name} />
           <div>
             <label className={"clientarea-label"}>Wallet</label>
             <p className={"clientarea-data-text"}>{user.wallet}</p>
