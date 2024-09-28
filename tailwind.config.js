@@ -3,7 +3,7 @@ export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      "avenir": ["Avenir Next Cyr", "sans-serif"],
+      avenir: ["Avenir Next Cyr", "sans-serif"],
     },
     extend: {
       animation: {

@@ -1,5 +1,5 @@
 export interface User {
-  wallet: string;
+  wallet?: string;
   email?: string;
   name?: string;
   listed?: boolean;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useUser } from "../../providers/UserProvider.tsx";
+import { ConnectAccountButton } from "./ConnectAccountButton.tsx";
 
 export const BetaTestSignUpForm = () => {
   const [name, setName] = useState<string>();
@@ -44,9 +45,7 @@ export const BetaTestSignUpForm = () => {
         </button>
       ) : (
         <div className="flex flex-col gap-5">
-          <button className={"main-button"} type={"submit"}>
-            Connect metamask
-          </button>
+          <ConnectAccountButton />
           <p
             className={
               "beta-test-description text-[0.875rem] font-[700] uppercase tracking-wider"

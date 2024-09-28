@@ -1,11 +1,14 @@
 import React from "react";
 import { UserProvider } from "./UserProvider.tsx";
 import { UserTableProvider } from "./UsersTableProvider.tsx";
+import { WagmiProviderContext } from "./WagmiProviderContext.tsx";
 
 // All application providers
 
 export const AppProviders = ({ children }: React.PropsWithChildren) => (
-  <UserProvider>
-    <UserTableProvider>{children}</UserTableProvider>
-  </UserProvider>
+  <WagmiProviderContext>
+    <UserProvider>
+      <UserTableProvider>{children}</UserTableProvider>
+    </UserProvider>
+  </WagmiProviderContext>
 );

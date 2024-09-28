@@ -22,7 +22,7 @@ export const BetaTestUsersTable = () => {
   if (!items) {
     return <div>Loading...</div>;
   }
-  console.log(user);
+
   return (
     <div className="beta-test-table">
       <h1 className={"beta-test-table-title"}>
@@ -75,7 +75,7 @@ export const BetaTestUsersTable = () => {
               <td className="beta-test-table-col-item">{item.username}</td>
               <td className="beta-test-table-col-item">{item.email}</td>
               <td className=" beta-test-table-wallet">{item.address}</td>
-              <td className={"beta-test-table-close-icon"}/>
+              <td className={"beta-test-table-close-icon"} />
             </tr>
           ))}
         </tbody>

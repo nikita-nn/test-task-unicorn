@@ -23,7 +23,6 @@
     @apply disabled:saturate-[75%] disabled:hover:bg-[#E75626] disabled:cursor-not-allowed;
   }
 
-
   .navbar-wallet {
     @apply font-[700] text-[#E75626] text-[1.15rem] overflow-hidden whitespace-nowrap text-ellipsis max-w-[12rem];
   }

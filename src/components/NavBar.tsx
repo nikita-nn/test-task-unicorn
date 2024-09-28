@@ -1,9 +1,10 @@
 import { useUser } from "../providers/UserProvider.tsx";
 import { Link } from "react-router-dom";
 
+import { ConnectAccountButton } from "./widgets/ConnectAccountButton.tsx";
+
 export const NavBar = () => {
   const { user } = useUser();
-
   return (
     <header className="header-main-page">
       <Link to={"/"}>
@@ -12,7 +13,7 @@ export const NavBar = () => {
       {user && user.wallet ? (
         <p className={"navbar-wallet"}>{user.wallet}</p>
       ) : (
-        <button className="main-button">CONNECT METAMASK</button>
+        <ConnectAccountButton />
       )}
     </header>
   );

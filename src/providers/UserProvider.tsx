@@ -10,10 +10,7 @@ export const UserProvider = ({ children }: React.PropsWithChildren) => {
 
   const editUser = (whatToChange: keyof User, value: string | boolean) => {
     setUser((prevUser) => {
-      if (prevUser) {
-        return { ...prevUser, [whatToChange]: value };
-      }
-      return null;
+      return { ...prevUser, [whatToChange]: value };
     });
   };
 
