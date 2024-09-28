@@ -43,7 +43,7 @@ export const BetaTestSignUpForm = () => {
           Get early access
         </button>
       ) : (
-        <>
+        <div className="flex flex-col gap-5">
           <button className={"main-button"} type={"submit"}>
             Connect metamask
           </button>
@@ -54,7 +54,7 @@ export const BetaTestSignUpForm = () => {
           >
             You need to connect wallet before registration
           </p>
-        </>
+        </div>
       )}
     </div>
   );

@@ -9,5 +9,4 @@ export interface IUserContext {
   user: User | null;
   reloadUser: () => void;
   editUser: (whatToChange: keyof User, value: string | boolean) => void;
-  clearUser: () => void;
 }

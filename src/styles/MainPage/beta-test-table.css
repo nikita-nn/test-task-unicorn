@@ -30,4 +30,8 @@
   .beta-test-table-col-item {
     @apply py-3 pr-12;
   }
+
+  .beta-test-table-close-icon {
+    @apply text-white w-4 h-4 cursor-pointer;
+  }
 }

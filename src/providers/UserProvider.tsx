@@ -4,9 +4,7 @@ import { IUserContext, User } from "../types/UserTypes.ts";
 const UserContext = React.createContext<IUserContext | null>(null);
 
 export const UserProvider = ({ children }: React.PropsWithChildren) => {
-  const [user, setUser] = useState<User | null>({
-    wallet: "0x1yhrin4ikc522gedkdxaytckehs27fjahmr2ro5b",
-  });
+  const [user, setUser] = useState<User | null>(null);
 
   const reloadUser = () => {};
 
@@ -19,14 +17,8 @@ export const UserProvider = ({ children }: React.PropsWithChildren) => {
     });
   };
 
-  const clearUser = () => {
-    if (user) {
-      setUser({ wallet: user.wallet });
-    }
-  };
-
   return (
-    <UserContext.Provider value={{ user, reloadUser, editUser, clearUser }}>
+    <UserContext.Provider value={{ user, reloadUser, editUser }}>
       {children}
     </UserContext.Provider>
   );

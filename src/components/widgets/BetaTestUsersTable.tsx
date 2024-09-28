@@ -52,7 +52,7 @@ export const BetaTestUsersTable = () => {
                 <td className="beta-test-table-wallet">{user.wallet}</td>
                 <td>
                   <X
-                    className={"text-white w-4 h-4"}
+                    className={"beta-test-table-close-icon"}
                     onClick={() => editUser("listed", false)}
                   />
                 </td>
