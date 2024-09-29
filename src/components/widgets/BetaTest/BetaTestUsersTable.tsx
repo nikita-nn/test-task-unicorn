@@ -3,6 +3,11 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../../providers/UserProvider.tsx";
 import { X } from "lucide-react";
+import { useAnimate } from "../../../hooks/animateMe.ts";
+
+/**
+ * Таблица пользователей, зарегистрировавшихся на бета-тестирование.
+ */
 
 export const BetaTestUsersTable = () => {
   const { items, fetchPage, listUserInTable } = useTableData();
@@ -10,20 +15,11 @@ export const BetaTestUsersTable = () => {
   const [currentPage, setCurrentPage] = useState<number>(0);
   const navigate = useNavigate();
   const { user } = useUser();
-  const [animationClass, setAnimationClass] =
-    useState<string>("beta-test-table");
+  const animationClass = useAnimate("beta-test-table");
 
   const fetchTableData = async () => {
     await fetchPage(currentPage, perPage);
   };
-
-  useEffect(() => {
-    setAnimationClass("beta-test-table-enter");
-    const timer = setTimeout(() => {
-      setAnimationClass("beta-test-table");
-    }, 300);
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     fetchTableData();

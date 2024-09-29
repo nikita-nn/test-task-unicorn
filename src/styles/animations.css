@@ -1,0 +1,17 @@
+@layer components {
+  .animation-enter {
+    @apply opacity-0 scale-95;
+  }
+
+  .animation-enter-active {
+    @apply opacity-100 scale-100;
+  }
+
+  .animation-exit {
+    @apply opacity-100 scale-100;
+  }
+
+  .animation-exit-active {
+    @apply opacity-0 scale-95;
+  }
+}

@@ -1,23 +1,8 @@
 @layer components {
   .beta-test-table {
-    @apply flex flex-col gap-8 mr-10 transition-all duration-300 ease-in-out;
+    @apply flex flex-col gap-8 mr-10;
   }
 
-  .beta-test-table-enter {
-    @apply opacity-0 scale-95;
-  }
-
-  .beta-test-table-enter-active {
-    @apply opacity-100 scale-100;
-  }
-
-  .beta-test-table-exit {
-    @apply opacity-100 scale-100;
-  }
-
-  .beta-test-table-exit-active {
-    @apply opacity-0 scale-95;
-  }
   .beta-test-table-title {
     @apply font-[700] text-[2.25rem] tracking-wider -mt-2;
   }
