@@ -1,8 +1,8 @@
 {
-  "rewrites": [
+  "routes": [
     {
-      "source": "/docs/:path*",
-      "destination": "/docs/index.html"
+      "src": "/docs/(.*)",
+      "dest": "/docs/$1"
     }
   ]
 }
