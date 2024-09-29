@@ -28,7 +28,7 @@
   }
 
   .beta-test-table-col-item {
-    @apply py-3 pr-12;
+    @apply py-3 pr-12  w-[200px];
   }
 
   .beta-test-table-close-icon {

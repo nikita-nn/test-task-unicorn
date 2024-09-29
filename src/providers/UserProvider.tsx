@@ -41,7 +41,6 @@ export const UserProvider = ({ children }: React.PropsWithChildren) => {
     if (listed && listed !== "null") {
       editUser("listed", listed === "true");
     }
-    console.log("called", trigger);
   }, [address, trigger]);
 
   /**
