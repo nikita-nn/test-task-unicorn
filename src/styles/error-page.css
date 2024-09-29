@@ -1,0 +1,17 @@
+.error-page-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  gap: 2rem;
+  font-family: "Avenir Next Cyr", sans-serif;
+}
+
+.error-page-title {
+  font-size: 3rem;
+}
+
+.error-page-link {
+  text-decoration: underline;
+}
