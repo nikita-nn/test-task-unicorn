@@ -4,7 +4,7 @@
   }
 
   .beta-test-heading {
-    @apply text-[2.25rem] text-[#E75626] uppercase font-[700] leading-[2.63rem];
+    @apply text-[2.25rem] text-primary uppercase font-[700] leading-[2.63rem];
   }
 
   .beta-test-description {

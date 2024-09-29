@@ -1,4 +1,4 @@
-import { NameEmailComponent } from "../NameEmailComponent.tsx";
+import { NameEmailComponent } from "./NameEmailComponent.tsx";
 import { useUser } from "../../../providers/UserProvider.tsx";
 import { useTableData } from "../../../providers/UsersTableProvider.tsx";
 

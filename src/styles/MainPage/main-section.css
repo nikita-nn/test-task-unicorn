@@ -20,7 +20,7 @@
   }
 
   .main-stats-heading {
-    @apply text-[1.75rem] font-[700] text-[#E75626];
+    @apply text-[1.75rem] font-[700] text-primary;
   }
 
   .main-stats-container {

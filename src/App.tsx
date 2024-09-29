@@ -1,5 +1,5 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import { NavBar } from "./components/NavBar.tsx";
+import { NavBar } from "./components/modules/widgets/NavBar.tsx";
 import React from "react";
 import { AppProviders } from "./providers/AppProviders.tsx";
 

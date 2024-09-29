@@ -12,7 +12,7 @@
   }
 
   .beta-test-table-input {
-    @apply text-center bg-[#171719] border-[1px] w-12 h-12 font-avenir rounded-lg;
+    @apply text-center bg-primary border-[1px] w-12 h-12 font-avenir rounded-lg;
   }
 
   .beta-test-table-pagination {

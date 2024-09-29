@@ -1,7 +1,7 @@
-import { BetaTestListMeComponent } from "../../widgets/BetaTest/BetaTestListMeComponent.tsx";
+import { BetaTestListMeComponent } from "../../modules/BetaTestSection/BetaTestListMeComponent.tsx";
 import { useUser } from "../../../providers/UserProvider.tsx";
-import { BetaTestSignUpForm } from "../../widgets/BetaTest/BetaTestSignUpForm.tsx";
-import { BetaTestUsersTable } from "../../widgets/BetaTest/BetaTestUsersTable.tsx";
+import { BetaTestSignUpForm } from "../../modules/BetaTestSection/BetaTestSignUpForm.tsx";
+import { BetaTestUsersTable } from "../../modules/BetaTestSection/BetaTestUsersTable.tsx";
 
 /**
  * Секция бета-тестирования мета-вселенной.

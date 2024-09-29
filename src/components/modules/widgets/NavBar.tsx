@@ -1,6 +1,6 @@
-import { useUser } from "../providers/UserProvider.tsx";
+import { useUser } from "../../../providers/UserProvider.tsx";
 import { Link } from "react-router-dom";
-import { ConnectAccountButton } from "./widgets/ConnectAccountButton.tsx";
+import { ConnectAccountButton } from "./ConnectAccountButton.tsx";
 
 /**
  * Навигационное меню для пользователя
@@ -10,7 +10,7 @@ export const NavBar = () => {
   const { user } = useUser();
   return (
     <header className="header-main-page">
-      <Link to={"/"}>
+      <Link to={"/public"}>
         <img src={"/pasteYourLogo.svg"} alt={"logo"} />
       </Link>
       {user && user.wallet ? (

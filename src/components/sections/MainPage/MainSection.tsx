@@ -1,4 +1,4 @@
-import { Planet } from "../../widgets/Planet.tsx";
+import { Planet } from "../../modules/widgets/Planet.tsx";
 import { mockStats } from "../../../data/stats.ts";
 import { useAnimate } from "../../../hooks/animateMe.ts";
 

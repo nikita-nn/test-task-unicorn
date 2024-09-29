@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useUser } from "../../../providers/UserProvider.tsx";
-import { ConnectAccountButton } from "../ConnectAccountButton.tsx";
+import { ConnectAccountButton } from "../widgets/ConnectAccountButton.tsx";
+import { ErrorModal } from "../widgets/Modal.tsx";
 
 /**
  * Форма регистрации на бета-тест.
@@ -10,11 +11,12 @@ export const BetaTestSignUpForm = () => {
   const [name, setName] = useState<string>();
   const [email, setEmail] = useState<string>();
   const { user, editUser } = useUser();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const onSubmit = () => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!name || !email || !emailPattern.test(email)) {
-      return alert("Error in data");
+      return setIsModalOpen(true);
     }
 
     editUser("name", name);
@@ -59,6 +61,11 @@ export const BetaTestSignUpForm = () => {
           </p>
         </div>
       )}
+      <ErrorModal
+        closeModal={() => setIsModalOpen(false)}
+        data={"Error in your registration data, please re-check."}
+        isOpen={isModalOpen}
+      />
     </div>
   );
 };

@@ -52,7 +52,7 @@ export const BetaTestUsersTable = () => {
             user.email &&
             user.listed &&
             currentPage === 0 && (
-              <tr className={"beta-test-table-item text-[#E75626] cursor-auto"}>
+              <tr className={"beta-test-table-item text-primary cursor-auto"}>
                 <td className="beta-test-table-col-item">{user.name}</td>
                 <td className="beta-test-table-col-item">{user.email}</td>
                 <td className="beta-test-table-wallet">{user.wallet}</td>

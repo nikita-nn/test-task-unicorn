@@ -24,11 +24,19 @@
   }
 
   .navbar-wallet {
-    @apply font-[700] text-[#E75626] text-[1.15rem] overflow-hidden whitespace-nowrap text-ellipsis max-w-[12rem];
+    @apply font-[700] text-primary text-[1.15rem] overflow-hidden whitespace-nowrap text-ellipsis max-w-[12rem];
   }
 
   .text-stroke {
     -webkit-text-stroke: 1px white;
     @apply font-[500];
+  }
+
+  .text-primary {
+    @apply text-[#E75626];
+  }
+
+  .bg-primary {
+    @apply bg-[#171719];
   }
 }

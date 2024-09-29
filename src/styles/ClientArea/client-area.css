@@ -12,6 +12,6 @@
   }
 
   .clientarea-data-text {
-    @apply font-[700] text-[#E75626] text-[2rem] uppercase tracking-wider;
+    @apply font-[700] text-primary text-[2rem] uppercase tracking-wider;
   }
 }

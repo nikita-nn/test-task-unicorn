@@ -1,0 +1,17 @@
+@layer components {
+  .modal-wrapper {
+    @apply fixed inset-0 flex items-center justify-center z-50;
+  }
+
+  .modal-bg {
+    @apply bg-black opacity-75 fixed inset-0;
+  }
+
+  .modal-title {
+    @apply tracking-wider font-[700] text-[2.5rem] text-primary;
+  }
+
+  .modal-content {
+    @apply p-12 pb-9 pt-9 rounded-lg shadow-lg z-10  bg-primary flex flex-col items-center max-w-[30rem] gap-5;
+  }
+}

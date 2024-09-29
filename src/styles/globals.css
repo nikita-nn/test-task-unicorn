@@ -5,6 +5,7 @@
 @import "./base.css";
 @import "./MainPage/beta-test-table.css";
 @import "./animations.css";
+@import "./modal.css";
 
 @tailwind base;
 @tailwind components;
@@ -27,7 +28,7 @@
 
   body,
   #root {
-    @apply bg-[#171719] w-full h-[100vh] text-white overflow-x-hidden;
+    @apply bg-primary w-full h-[100vh] text-white overflow-x-hidden;
     font-family: "Bebas Neue", sans-serif;
   }
 

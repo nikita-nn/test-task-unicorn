@@ -1,5 +1,5 @@
-import { Planet } from "../../components/widgets/Planet.tsx";
-import { NameEmailComponent } from "../../components/widgets/NameEmailComponent.tsx";
+import { Planet } from "../../components/modules/widgets/Planet.tsx";
+import { NameEmailComponent } from "../../components/modules/BetaTestSection/NameEmailComponent.tsx";
 import { Navigate, useLocation } from "react-router-dom";
 
 /**
