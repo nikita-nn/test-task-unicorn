@@ -8,7 +8,7 @@
   }
 
   .beta-test-description {
-    @apply text-[1rem] font-[400] leading-[1.15rem];
+    @apply text-[1rem] font-[400] leading-[1.2rem];
   }
 
   .beta-test-form {
