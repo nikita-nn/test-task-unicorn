@@ -4,6 +4,7 @@ import {
   TableReponseContext,
   UsersTableResponse,
 } from "../types/UsersTableTypes.ts";
+import { useUser } from "./UserProvider.tsx";
 
 /**
  * Контекст данных пользователей в таблице, задел на будущее.
@@ -13,6 +14,7 @@ const UserTableContext = React.createContext<TableReponseContext | null>(null);
 
 export const UserTableProvider = ({ children }: React.PropsWithChildren) => {
   const [items, setItems] = useState<UsersTableResponse | null>(null);
+  const { editUser } = useUser();
 
   /**
    * Функция для запроса данных с сервера для таблицы.
@@ -32,8 +34,18 @@ export const UserTableProvider = ({ children }: React.PropsWithChildren) => {
     setItems(json);
   };
 
+  /**
+   * Функция для показа пользователя в таблице бета теста.
+   * @param list - показать или убрать пользователя из таблицы
+   */
+
+  const listUserInTable = (list: boolean) => {
+    localStorage.setItem("listed", list.toString());
+    editUser("listed", list);
+  };
+
   return (
-    <UserTableContext.Provider value={{ items, fetchPage }}>
+    <UserTableContext.Provider value={{ items, fetchPage, listUserInTable }}>
       {children}
     </UserTableContext.Provider>
   );

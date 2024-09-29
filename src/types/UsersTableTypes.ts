@@ -46,4 +46,5 @@ interface TableResponseUser {
 export interface TableReponseContext {
   items: UsersTableResponse | null;
   fetchPage: (page: number, elemsInPage: number) => Promise<void>;
+  listUserInTable: (list: boolean) => void;
 }

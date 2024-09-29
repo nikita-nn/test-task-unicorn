@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IUserContext, User } from "../types/UserTypes.ts";
+import { useAccount } from "wagmi";
 
 /**
  * Контекст данных пользователя, управление и обновление их.
@@ -9,13 +10,45 @@ const UserContext = React.createContext<IUserContext | null>(null);
 
 export const UserProvider = ({ children }: React.PropsWithChildren) => {
   const [user, setUser] = useState<User | null>(null);
+  const [trigger, setTrigger] = useState<boolean>(false);
+  const { address } = useAccount();
+
+  /**
+   * Автоматическая инициализация данных в зависимости от сохраненных в localstorage.
+   * TODO: сделать подтяжку данных с бэка
+   */
+
+  useEffect(() => {
+    const name = localStorage.getItem("name");
+    const email = localStorage.getItem("email");
+    const listed = localStorage.getItem("listed");
+
+    if (!address) {
+      localStorage.clear();
+      return;
+    } else {
+      editUser("wallet", String(address));
+    }
+
+    if (name && name !== "null") {
+      editUser("name", name);
+    }
+
+    if (email && email !== "null") {
+      editUser("email", email);
+    }
+
+    if (listed && listed !== "null") {
+      editUser("listed", listed === "true");
+    }
+    console.log("called", trigger);
+  }, [address, trigger]);
 
   /**
    * Функция для обновления данных пользователя.
-   * Not Implemented.
    */
 
-  const reloadUser = () => {};
+  const reloadUser = () => setTrigger(!trigger);
 
   /**
    * Функция для редактирования данных пользователя.
@@ -27,6 +60,7 @@ export const UserProvider = ({ children }: React.PropsWithChildren) => {
     setUser((prevUser) => {
       return { ...prevUser, [whatToChange]: value };
     });
+    localStorage.setItem(whatToChange, String(value));
   };
 
   return (

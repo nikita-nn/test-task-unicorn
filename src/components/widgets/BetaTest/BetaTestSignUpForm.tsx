@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useUser } from "../../providers/UserProvider.tsx";
-import { ConnectAccountButton } from "./ConnectAccountButton.tsx";
+import { useUser } from "../../../providers/UserProvider.tsx";
+import { ConnectAccountButton } from "../ConnectAccountButton.tsx";
 
 /**
  * Форма регистрации на бета-тест.

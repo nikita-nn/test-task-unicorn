@@ -1,7 +1,7 @@
-import { useTableData } from "../../providers/UsersTableProvider.tsx";
+import { useTableData } from "../../../providers/UsersTableProvider.tsx";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useUser } from "../../providers/UserProvider.tsx";
+import { useUser } from "../../../providers/UserProvider.tsx";
 import { X } from "lucide-react";
 
 /**
@@ -9,11 +9,11 @@ import { X } from "lucide-react";
  */
 
 export const BetaTestUsersTable = () => {
-  const { items, fetchPage } = useTableData();
+  const { items, fetchPage, listUserInTable } = useTableData();
   const [perPage, setPerPage] = useState<number>(10);
   const [currentPage, setCurrentPage] = useState<number>(0);
   const navigate = useNavigate();
-  const { user, editUser } = useUser();
+  const { user } = useUser();
 
   const fetchTableData = async () => {
     await fetchPage(currentPage, perPage);
@@ -26,7 +26,6 @@ export const BetaTestUsersTable = () => {
   if (!items) {
     return <div>Loading...</div>;
   }
-
   return (
     <div className="beta-test-table">
       <h1 className={"beta-test-table-title"}>
@@ -57,7 +56,7 @@ export const BetaTestUsersTable = () => {
                 <td>
                   <X
                     className={"beta-test-table-close-icon"}
-                    onClick={() => editUser("listed", false)}
+                    onClick={() => listUserInTable(false)}
                   />
                 </td>
               </tr>
