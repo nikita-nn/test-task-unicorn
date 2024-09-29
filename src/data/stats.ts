@@ -17,10 +17,10 @@ export const mockStats: IMockStats[] = [
   },
   {
     name: "Lorem ipsum dolor",
-    data: 123456,
+    data: 1234567,
   },
   {
     name: "Lorem ipsum dolor",
-    data: 123456,
+    data: 12345678,
   },
 ];

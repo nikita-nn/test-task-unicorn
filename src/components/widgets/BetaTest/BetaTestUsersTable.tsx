@@ -4,30 +4,37 @@ import { useNavigate } from "react-router-dom";
 import { useUser } from "../../../providers/UserProvider.tsx";
 import { X } from "lucide-react";
 
-/**
- * Таблица пользователей, зарегистрировавшихся на бета-тестирование.
- */
-
 export const BetaTestUsersTable = () => {
   const { items, fetchPage, listUserInTable } = useTableData();
   const [perPage, setPerPage] = useState<number>(10);
   const [currentPage, setCurrentPage] = useState<number>(0);
   const navigate = useNavigate();
   const { user } = useUser();
+  const [animationClass, setAnimationClass] =
+    useState<string>("beta-test-table");
 
   const fetchTableData = async () => {
     await fetchPage(currentPage, perPage);
   };
 
   useEffect(() => {
+    setAnimationClass("beta-test-table-enter");
+    const timer = setTimeout(() => {
+      setAnimationClass("beta-test-table");
+    }, 300);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
     fetchTableData();
   }, [currentPage, perPage]);
 
   if (!items) {
-    return <div>Loading...</div>;
+    return <></>;
   }
+
   return (
-    <div className="beta-test-table">
+    <div className={animationClass}>
       <h1 className={"beta-test-table-title"}>
         Participation listing (enable only for participants)
       </h1>
@@ -38,9 +45,9 @@ export const BetaTestUsersTable = () => {
               "text-[1.5rem] tracking-wider uppercase border-b border-white"
             }
           >
-            <th className={"text-left py-2 "}>NAME</th>
-            <th className={"text-left py-2 "}>EMAIL</th>
-            <th className={"text-left py-2"}>WALLET</th>
+            <th className={"beta-test-table-row "}>NAME</th>
+            <th className={"beta-test-table-row"}>EMAIL</th>
+            <th className={"beta-test-table-row"}>WALLET</th>
           </tr>
         </thead>
         <tbody>
@@ -48,7 +55,7 @@ export const BetaTestUsersTable = () => {
             user.name &&
             user.email &&
             user.listed &&
-            currentPage == 0 && (
+            currentPage === 0 && (
               <tr className={"beta-test-table-item text-[#E75626] cursor-auto"}>
                 <td className="beta-test-table-col-item">{user.name}</td>
                 <td className="beta-test-table-col-item">{user.email}</td>
@@ -77,7 +84,7 @@ export const BetaTestUsersTable = () => {
             >
               <td className="beta-test-table-col-item">{item.username}</td>
               <td className="beta-test-table-col-item">{item.email}</td>
-              <td className=" beta-test-table-wallet">{item.address}</td>
+              <td className="beta-test-table-wallet">{item.address}</td>
               <td className={"beta-test-table-close-icon"} />
             </tr>
           ))}

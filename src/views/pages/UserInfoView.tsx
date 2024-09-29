@@ -16,7 +16,7 @@ const UserInfoView = () => {
   return (
     <main>
       <section>
-        <h1 className={"clientarea-title"}>PErsonal data</h1>
+        <h1 className={"clientarea-title"}>Personal data</h1>
         <div className={"clientarea-info-container"}>
           <NameEmailComponent
             email={location.state.email}
