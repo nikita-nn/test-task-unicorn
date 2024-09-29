@@ -5,8 +5,13 @@ import { useAccount } from "wagmi";
 /**
  * Контекст данных пользователя, управление и обновление их.
  */
-
 const UserContext = React.createContext<IUserContext | null>(null);
+
+/**
+ * Провайдер контекста пользователя. Оборачивает компоненты, предоставляя
+ * доступ к данным пользователя и функциям их обновления.
+ * @param children - дочерние компоненты, которые могут использовать контекст.
+ */
 
 export const UserProvider = ({ children }: React.PropsWithChildren) => {
   const [user, setUser] = useState<User | null>(null);
@@ -14,8 +19,8 @@ export const UserProvider = ({ children }: React.PropsWithChildren) => {
   const { address } = useAccount();
 
   /**
-   * Автоматическая инициализация данных в зависимости от сохраненных в localstorage.
-   * TODO: сделать подтяжку данных с бэка
+   * Функция для перезагрузки данных пользователя, изменяя триггерный
+   * статус. Это приведет к повторной инициализации данных в useEffect.
    */
 
   useEffect(() => {
