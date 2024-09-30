@@ -43,7 +43,7 @@ export interface TableResponseUser {
  * @interface
  */
 
-export interface TableReponseContext {
+export interface TableResponseContext {
   items: UsersTableResponse | null;
   fetchPage: (page: number, elemsInPage: number) => Promise<void>;
   listUserInTable: (list: boolean) => void;

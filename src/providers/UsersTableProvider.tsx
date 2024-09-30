@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ApiUrl } from "../../settings.ts";
 import {
-  TableReponseContext,
+  TableResponseContext,
   UsersTableResponse,
 } from "../types/UsersTableTypes.ts";
 import { useUser } from "./UserProvider.tsx";
@@ -10,7 +10,7 @@ import { useUser } from "./UserProvider.tsx";
  * Контекст данных пользователей в таблице, задел на будущее.
  */
 
-const UserTableContext = React.createContext<TableReponseContext | null>(null);
+const UserTableContext = React.createContext<TableResponseContext | null>(null);
 
 export const UserTableProvider = ({ children }: React.PropsWithChildren) => {
   const [items, setItems] = useState<UsersTableResponse | null>(null);
