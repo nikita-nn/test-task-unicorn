@@ -26,6 +26,7 @@ export default defineConfig({
           remixRunRouter: ["@remix-run/router"],
           reactRouter: ["react-router"],
           zustand: ["zustand"],
+          tanstack: ["@tanstack/react-query", "@tanstack/query-core"],
         },
       },
     },
