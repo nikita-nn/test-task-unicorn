@@ -1,7 +1,9 @@
 /**
  * Компонент для корректного отображения email и имени пользователя.
- * @param name - имя пользователя.
- * @param email - электронная почта пользователя.
+ *
+ * @param  props - Свойства компонента.
+ * @param {string} props.name - Имя пользователя.
+ * @param {string} props.email - Электронная почта пользователя.
  */
 
 export const NameEmailComponent = ({

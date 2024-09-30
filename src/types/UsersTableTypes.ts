@@ -20,7 +20,7 @@ export interface UsersTableResponse {
  * @interface
  */
 
-interface ResponseMeta {
+export interface ResponseMeta {
   currentPage: number;
   perPage: number;
   totalPages: number;
@@ -31,7 +31,7 @@ interface ResponseMeta {
  * @interface
  */
 
-interface TableResponseUser {
+export interface TableResponseUser {
   id: number;
   username: string;
   email: string;

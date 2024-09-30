@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 /**
  * Хук для создания базовой анимации
- * @params baseClass - параметр показывающий базовый стиль обьекта, к которому применяется анимация
+ * @param baseClass - параметр показывающий базовый стиль обьекта, к которому применяется анимация
  */
 
 export const useAnimate = (baseClass: string) => {

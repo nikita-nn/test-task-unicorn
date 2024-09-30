@@ -2,7 +2,7 @@
  * Предположительная структура данных статистики.
  * @interface
  */
-interface IMockStats {
+export interface IMockStats {
   name: string;
   data: number;
 }

@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 
 /**
  * Модальное окно с сообщением об ошибке.
- * @param isOpen - указывает на текущее состояние окна (true - открыто, false - закрыто)
- * @param data - текст ошибки
- * @param closeModal - функция закрытия модального окна
+ *
+ * @param props - Свойства компонента.
+ * @param {boolean} props.isOpen - Указывает на текущее состояние окна (true - открыто, false - закрыто).
+ * @param {string} props.data - Текст ошибки.
+ * @param {function} props.closeModal - Функция закрытия модального окна.
  */
 
 export const ErrorModal = ({
