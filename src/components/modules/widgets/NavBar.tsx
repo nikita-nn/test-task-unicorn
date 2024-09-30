@@ -10,7 +10,7 @@ export const NavBar = () => {
   const { user } = useUser();
   return (
     <header className="header-main-page">
-      <Link to={"/public"}>
+      <Link to={"/"}>
         <img src={"/pasteYourLogo.svg"} alt={"logo"} />
       </Link>
       {user && user.wallet ? (
